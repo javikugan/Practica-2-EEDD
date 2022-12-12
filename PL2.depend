@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1670886618 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\src\arbolabb.cpp
+	<iostream>
+	"ArbolABB.h"
+
+1670886618 c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\include\arbolabb.h
+	<iostream>
+
