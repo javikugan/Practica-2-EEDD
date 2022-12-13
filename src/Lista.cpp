@@ -57,7 +57,7 @@ void Lista::esCabeza(){
 void Lista::esFinal(){
 
     esCabeza();
-    if(!listaVacia()) // Más sencillo
+    if(!listaVacia()) // Mï¿½s sencillo
         while(actual->siguiente) // actual = final;
             esSiguiente();
 }
