@@ -17,17 +17,17 @@ void ArbolABB::Podar(Nodo* &nodo)
 }
 
 // Insertar un int en el �rbol ABB
-void ArbolABB::Insertar(const int dat)
+void ArbolABB::Insertar(Pasajero dat)
 {
    Nodo *padre = NULL;
 
    actual = raiz;
 
    // Buscar el int en el �rbol, manteniendo un puntero al nodo padre
-   while(!Vacio(actual) && dat != actual->dato) {
+   while(!Vacio(actual) && dat.PNR != actual->dato.PNR) {
       padre = actual;
-      if(dat > actual->dato) actual = actual->derecho;
-      else if(dat < actual->dato) actual = actual->izquierdo;
+      if(dat.PNR > actual->dato.PNR) actual = actual->derecho;
+      else if(dat.PNR < actual->dato.PNR) actual = actual->izquierdo;
    }
 
    // Si se ha encontrado el elemento, regresar sin insertar
@@ -39,24 +39,24 @@ void ArbolABB::Insertar(const int dat)
 
    // Si el int es menor que el que contiene el nodo padre, lo insertamos
    // en la rama izquierda
-   else if(dat < padre->dato) padre->izquierdo = new Nodo(dat);
+   else if(dat.PNR < padre->dato.PNR) padre->izquierdo = new Nodo(dat);
 
    // Si el int es mayor que el que contiene el nodo padre, lo insertamos
    // en la rama derecha
-   else if(dat > padre->dato) padre->derecho = new Nodo(dat);
+   else if(dat.PNR > padre->dato.PNR) padre->derecho = new Nodo(dat);
 }
 
 // Eliminar un elemento de un �rbol ABB
-void ArbolABB::Borrar(const int dat)
+void ArbolABB::Borrar(Pasajero dat)
 {
    Nodo *padre = NULL;
    Nodo *nodo;
-   int aux;
+   Pasajero aux;
 
    actual = raiz;
    // Mientras sea posible que el valor est� en el �rbol
    while(!Vacio(actual)) {
-      if(dat == actual->dato) { // Si el valor est� en el nodo actual
+      if(dat.PNR == actual->dato.PNR) { // Si el valor est� en el nodo actual
          if(EsHoja(actual)) { // Y si adem�s es un nodo hoja: lo borramos
             if(padre) // Si tiene padre (no es el nodo raiz)
                // Anulamos el puntero que le hace referencia
@@ -97,8 +97,8 @@ void ArbolABB::Borrar(const int dat)
       }
       else { // Todav�a no hemos encontrado el valor, seguir busc�ndolo
          padre = actual;
-         if(dat > actual->dato) actual = actual->derecho;
-         else if(dat < actual->dato) actual = actual->izquierdo;
+         if(dat.PNR > actual->dato.PNR) actual = actual->derecho;
+         else if(dat.PNR < actual->dato.PNR) actual = actual->izquierdo;
       }
    }
 }

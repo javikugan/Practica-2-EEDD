@@ -1,4 +1,7 @@
 #include <iostream>
+#include "TMaleta.h"
+#include "Pasajero.h"
+
 using namespace std;
 
 class ArbolABB {
@@ -10,7 +13,7 @@ class ArbolABB {
       Nodo(Pasajero dat, Nodo *izq=NULL, Nodo *der=NULL) :
         dato(dat), izquierdo(izq), derecho(der) {}
       // Miembros:
-      int dato;
+      Pasajero dato;
       Nodo *izquierdo;
       Nodo *derecho;
    };
@@ -28,13 +31,13 @@ class ArbolABB {
    ~ArbolABB() { Podar(raiz); }
 
    // Insertar en �rbol ordenado:
-   void Insertar(TMaleta dat);
+   void Insertar(Pasajero dat);
 
    // Borrar un elemento del �rbol:
-   void Borrar(TMaleta dat);
+   void Borrar(Pasajero dat);
 
    // Funci�n de b�squeda:
-   bool Buscar(TMaleta dat);
+   bool Buscar(Pasajero dat);
 
    // Comprobar si el �rbol est� vac�o:
    bool Vacio(Nodo *r) { return r==NULL; }
@@ -47,23 +50,23 @@ class ArbolABB {
    const int AlturaArbol();
 
    // Calcular altura de un int:
-   int Altura(TMaleta dat);
-,
+   int Altura(Pasajero dat);
+
    // Devolver referencia al int del nodo actual:
-   TMaleta &ValorActual() { return actual->dato; }
+   Pasajero &ValorActual() { return actual->dato; }
 
    // Moverse al nodo raiz:
    void Raiz() { actual = raiz; }
 
    // Aplicar una funci�n a cada elemento del �rbol:
-   void InOrden(void (*func)(TMaleta&) , Nodo *nodo=NULL, bool r=true);
-   void PreOrden(void (*func)(TMaleta&) , Nodo *nodo=NULL, bool r=true);
-   void PostOrden(void (*func)(TMaleta&) , Nodo *nodo=NULL, bool r=true);
+   void InOrden(void (*func)(Pasajero&) , Nodo *nodo=NULL, bool r=true);
+   void PreOrden(void (*func)(Pasajero&) , Nodo *nodo=NULL, bool r=true);
+   void PostOrden(void (*func)(Pasajero&) , Nodo *nodo=NULL, bool r=true);
 
 
   private:
    // Funciones auxiliares
    void Podar(Nodo* &);
    void auxContador(Nodo*);
-   void auxAltura(Nodo*, TMaleta);
+   void auxAltura(Nodo*, Pasajero);
 };

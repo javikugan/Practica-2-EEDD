@@ -6,8 +6,10 @@
 	<iostream>
 	"ArbolABB.h"
 
-1670934345 z:\universidad\eedd\practica-2-eedd\include\arbolabb.h
+1670943721 z:\universidad\eedd\practica-2-eedd\include\arbolabb.h
 	<iostream>
+	"TMaleta.h"
+	"Pasajero.h"
 
 1670930780 source:z:\universidad\eedd\practica-2-eedd\src\nodolista.cpp
 	"NodoLista.h"
@@ -18,9 +20,12 @@
 1670930913 z:\universidad\eedd\practica-2-eedd\include\tmaleta.h
 	<iostream>
 
-1670932633 source:z:\universidad\eedd\practica-2-eedd\src\lista.cpp
+1670934475 source:z:\universidad\eedd\practica-2-eedd\src\lista.cpp
 	"Lista.h"
 
-1670931173 z:\universidad\eedd\practica-2-eedd\include\lista.h
+1670934467 z:\universidad\eedd\practica-2-eedd\include\lista.h
 	"NodoLista.h"
+
+1670932603 z:\universidad\eedd\practica-2-eedd\include\pasajero.h
+	"Lista.h"
 
