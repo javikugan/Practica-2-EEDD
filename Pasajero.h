@@ -1,6 +1,5 @@
 #ifndef PASAJERO
 #define PASAJERO
-#include "Lista.h"
 
 struct Pasajero{
 
@@ -12,9 +11,8 @@ struct Pasajero{
     string destino;
     string fechavuelo;
     string horasal;
-    string nasiento;
-    string locequip;
-    Lista equipaje;
+    string nasiento
+    string locequip
 };
 
 #endif // PASAJERO

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1670885348 source:z:\universidad\eedd\practica-2-eedd\main.cpp
+	<iostream>
+
+1670886616 source:z:\universidad\eedd\practica-2-eedd\src\arbolabb.cpp
+	<iostream>
+	"ArbolABB.h"
+
+1670934345 z:\universidad\eedd\practica-2-eedd\include\arbolabb.h
+	<iostream>
+
+1670930780 source:z:\universidad\eedd\practica-2-eedd\src\nodolista.cpp
+	"NodoLista.h"
+
+1670930780 z:\universidad\eedd\practica-2-eedd\include\nodolista.h
+	"TMaleta.h"
+
+1670930913 z:\universidad\eedd\practica-2-eedd\include\tmaleta.h
+	<iostream>
+
+1670932633 source:z:\universidad\eedd\practica-2-eedd\src\lista.cpp
+	"Lista.h"
+
+1670931173 z:\universidad\eedd\practica-2-eedd\include\lista.h
+	"NodoLista.h"
+
