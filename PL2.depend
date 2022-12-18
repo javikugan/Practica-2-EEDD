@@ -29,3 +29,21 @@
 1670932603 z:\universidad\eedd\practica-2-eedd\include\pasajero.h
 	"Lista.h"
 
+1670885350 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\main.cpp
+	<iostream>
+
+1671302885 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\src\lista.cpp
+	"Lista.h"
+
+1671302885 c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\include\lista.h
+	"NodoLista.h"
+
+1671302885 c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\include\nodolista.h
+	"TMaleta.h"
+
+1671302885 c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\include\tmaleta.h
+	<iostream>
+
+1671302885 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\src\nodolista.cpp
+	"NodoLista.h"
+

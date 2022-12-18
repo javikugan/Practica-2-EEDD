@@ -11,5 +11,6 @@ namespace Util{
     void imprimirMaleta(TMaleta maleta);
     string dni_aleat();
     TMaleta generar_maleta();
+
 }
 #endif
