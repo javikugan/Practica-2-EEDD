@@ -1,5 +1,6 @@
 #include "Util.h"
 
+
 using namespace std;
 
     TMaleta generar_maleta(string pnr, int n){
@@ -9,15 +10,17 @@ using namespace std;
     maleta.peso = rand()%20;
     maleta.nbulto = n;
     maleta.tipo = "por definir";
+    return maleta;
 
     }
 
-    Lista generar_equipaje(string pnr){
+    Lista* generar_equipaje(string pnr){
 
-        Lista aux = new Lista();
+        Lista* aux = new Lista();
         for (int i; i < rand()%6; i++){
 
         }
+        return aux;
 
     }
 /* función para generar de forma  aleatoria los DNI a partir de dos arrays ( el primero de numeros y el segundo de las letras del abecedario en mayúsculas).

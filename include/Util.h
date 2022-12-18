@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <TMaleta.h>
+#include "Lista.h"
 
 using namespace std;
 

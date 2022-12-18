@@ -29,6 +29,7 @@
 1670932603 z:\universidad\eedd\practica-2-eedd\include\pasajero.h
 	"Lista.h"
 
+<<<<<<< Updated upstream
 1670885350 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\main.cpp
 	<iostream>
 
@@ -45,5 +46,35 @@
 	<iostream>
 
 1671302885 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\src\nodolista.cpp
+=======
+1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/main.cpp
+	<iostream>
+
+1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/ArbolABB.cpp
+	<iostream>
+	"ArbolABB.h"
+
+1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/ArbolABB.h
+	<iostream>
+	"TMaleta.h"
+	"Pasajero.h"
+
+1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
+	<iostream>
+
+1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
+	"Lista.h"
+
+1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
+	"NodoLista.h"
+
+1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
+	"TMaleta.h"
+
+1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Lista.cpp
+	"Lista.h"
+
+1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/NodoLista.cpp
+>>>>>>> Stashed changes
 	"NodoLista.h"
 
