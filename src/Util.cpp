@@ -88,21 +88,9 @@ genera de forma aleatoria una hora de salida  de entre 4 horas distintas estable
 
 
         return PNR ;
+    };
 
 
     bool running = true;
-Menu menus[MENUS_MAX] = {
-    {1, "Insertar nuevo registro manualmente con un solo bulto en su lista de equipaje.\
-     Elegir asiento mientras queden asientos libres.                           ", menuInsertarAB},
-    {2, "Modificar los campos de un registro salvo el de  equipaje.            ", menuModificarCA},
-    {3, "Borrar un registro dado del árbol                                     ", menuBorrarAB},
-    {4, "Mostrar los datos de un pasajero concreto buscando por su PNR         ", menudatosPA},
-    {5, "Mostrar los datos del equipaje de un pasajero identificado por su PNR.", menuEquipajePA},
-    {6, "Añadir un nuevo bulto al equipaje de un pasajero dado.                ", menuAñadirBultoEQ},
-    {7, "Borrar algún bulto del equipaje de un pasajero dado.                  ", menuBorrarBulto},
-    {8, "Modificar los datos del equipaje de un pasajero dado                  ", menuModificarDatosPA},
-    {9, "Cambiar bulto del equipaje de un pasajero a otro pasajero diferente \
-        identificados por su PNR.                                              ", menuCambiarBultoPasajero},
-    {0, "Salir del programa                                                    ", menuExit},
-};
+
     TMaleta Util::generar_maleta()
