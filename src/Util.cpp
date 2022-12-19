@@ -210,6 +210,289 @@ void Util::menu_anadir_Pasajero(){
 
 }
 
+-void Util::menu_modificar(ArbolABB* pasajeros){
+
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string dniinp;
+    string nombreimp;
+    string asiento;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU INSERTA\n";
+        //opciones del menú
+        cout << "\n\t1.Modificar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del Pasajero: ";
+            cin >> PNRimp;
+            cout << "\n \t(Si no desea Modificar un Campo dejelo en blanco)";
+            cout << "\n \tDNI Nuevo: ";
+            cin >> dniinp;
+            cout << "\n \tNombre y Apellidos nuevos";
+            cin >> nombreimp;
+            cout << "\n \tElige el Asiento";
+            cin >> asiento;
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+
+}
+
+
+void Util::menu_borrar(ArbolABB* pasajeros){
+
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU BORRAR\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+            cout << "\n \tESTAS SEGURO? y/n: ";
+            cin >> eleccion;
+            if (eleccion == "y"){
+             pasajeros->Borrar(PNRimp);
+            }
+
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+
+}
+void Util::menu_mostrar_pasajero(ArbolABB* pasajeros){
+
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MOSTRAR EQUIPAJE\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+            Util::leerPasajero(pasajeros->Buscar(PNRimp));
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+}
+
+void Util::menu_mostrar_equipaje(ArbolABB* pasajeros){
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MOSTRAR EQUIPAJE\n";
+        //opciones del menú
+        cout << "\n\t1.Mostrar equipaje\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+
+
+            break;
+        case 0:
+            repeticion = false;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+}
+void Util::menu_borrar_equipaje(ArbolABB* pasajeros){
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MOSTRAR\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+            cout << "\n \tESTAS SEGURO? y/n: ";
+            cin >> eleccion;
+            if (eleccion == "y"){
+             pasajeros->Borrar(PNRimp);
+            }
+
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+}
+void Util::menu_modifica_equipaje(ArbolABB* pasajeros){
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MOSTRAR\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+            cout << "\n \tESTAS SEGURO? y/n: ";
+            cin >> eleccion;
+            if (eleccion == "y"){
+             pasajeros->Borrar(PNRimp);
+            }
+
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+}
+void Util::menu_mover_equipaje(ArbolABB* pasajeros){
+    bool repeticion = true;
+    int opcion;
+    string PNRimp;
+    string eleccion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MOSTRAR\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\t0.Salir\n";
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            cout << "\n \tPNR del pasajero: ";
+            cin >> PNRimp;
+            cout << "\n \tESTAS SEGURO? y/n: ";
+            cin >> eleccion;
+            if (eleccion == "y"){
+             pasajeros->Borrar(PNRimp);
+            }
+
+            break;
+        case 0:
+            repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+    }while(repeticion);
+}
+
+void Util::leerPasajero(Pasajero p){
+    cout << "\n \tPNR del pasajero: ";
+    cout << p.PNR;
+    cout << "\n \tNombre del pasajero: ";
+    cout << p.nombrecompl;
+    cout << "\n \tDNI del pasajero: ";
+    cout << p.dni;
+    cout << "\n \tID de Vuelo del pasajero: ";
+    cout << p.idVuelo;
+    cout << "\n \torigen del pasajero: ";
+    cout << p.origen;
+    cout << "\n \tdestino del pasajero: ";
+    cout << p.destino;
+    cout << "\n \tAsiento del pasajero: ";
+    cout << p.nasiento;
+
+}
+void Util::leerEquipaje(Pasajero p){
+    p.equipaje->recorrerLista();
+}
+
 
 
 
