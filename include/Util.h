@@ -1,9 +1,10 @@
-#ifndef UTIL_H
-#define UTIL_H
+#ifndef UTIL
+#define UTIL
 
 #include <iostream>
-#include "TMaleta.h"
-#include "Lista.h"
+#include <Pasajero.h>
+#include <TMaleta.h>
+#include <Lista.h>
 
 using namespace std;
 
@@ -16,9 +17,6 @@ namespace Util{
     string generar_nombres();
     string generar_hora_salida();
     string generar_destino();
-
-
-
 
 }
 #endif

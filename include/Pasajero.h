@@ -1,6 +1,11 @@
+#include <iostream>
+
+
 #ifndef PASAJERO
 #define PASAJERO
-#include "Lista.h"
+
+#include <Lista.h>
+using namespace std;
 
 struct Pasajero{
 

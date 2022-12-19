@@ -4,49 +4,24 @@
 
 using namespace std;
 
-// Poda: borrar todos los nodos a partir de uno, incluido
-void ArbolABB::Podar(Nodo* &nodo)
-{
-   // Algoritmo recursivo, recorrido en postorden
-   if(nodo) {
-      Podar(nodo->izquierdo); // Podar izquierdo
-      Podar(nodo->derecho);   // Podar derecho
-      delete nodo;            // Eliminar nodo
-      nodo = NULL;
-   }
-}
+
 
 // Insertar un int en el �rbol ABB
-void ArbolABB::Insertar(Pasajero dat)
+pnodoAbb Arbol::insertar(pnodoAbb arbol, Paciente* p)
 {
-   Nodo *padre = NULL;
-
-   actual = raiz;
-
-   // Buscar el int en el �rbol, manteniendo un puntero al nodo padre
-   while(!Vacio(actual) && dat.PNR != actual->dato.PNR) {
-      padre = actual;
-      if(dat.PNR > actual->dato.PNR) actual = actual->derecho;
-      else if(dat.PNR < actual->dato.PNR) actual = actual->izquierdo;
-   }
-
-   // Si se ha encontrado el elemento, regresar sin insertar
-   if(!Vacio(actual)) return;
-
-   // Si padre es NULL, entonces el �rbol estaba vac�o, el nuevo nodo ser�
-   // el nodo raiz
-   if(Vacio(padre)) raiz = new Nodo(dat);
-
-   // Si el int es menor que el que contiene el nodo padre, lo insertamos
-   // en la rama izquierda
-   else if(dat.PNR < padre->dato.PNR) padre->izquierdo = new Nodo(dat);
-
-   // Si el int es mayor que el que contiene el nodo padre, lo insertamos
-   // en la rama derecha
-   else if(dat.PNR > padre->dato.PNR) padre->derecho = new Nodo(dat);
+    if(arbol == NULL) {
+        return new NodoArbol(p);
+    } else {
+        if(p->getHab() <= arbol->paciente->getHab()) {
+            arbol->izq = insertar(arbol->izq, p);
+        } else {
+            arbol->der = insertar(arbol->der, p);
+        }
+    }
+    return arbol;
 }
 
-// Eliminar un elemento de un �rbol ABB
+// Eliminar un elemento de un Arbol ABB
 void ArbolABB::Borrar(Pasajero dat)
 {
    Nodo *padre = NULL;

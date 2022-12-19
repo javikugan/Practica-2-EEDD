@@ -3,7 +3,6 @@
 #ifndef TMALETA
 #define TMALETA
 
-
 using namespace std;
 
 struct TMaleta{

@@ -1,7 +1,8 @@
-#ifndef NODOLISTA_H
-#define NODOLISTA_H
+#include <iostream>
+#ifndef NODOLISTA
+#define NODOLISTA
 
-#include "TMaleta.h"
+#include <TMaleta.h>
 
 
 
