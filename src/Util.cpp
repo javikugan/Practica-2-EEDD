@@ -1,6 +1,7 @@
 #include <Util.h>
 #include <cstdlib>
 #include <iostream>
+
 using namespace std;
 
     TMaleta Util::generar_maleta(string pnr, int n){
@@ -86,39 +87,41 @@ using namespace std;
         return pasajero;
     }
 
-    std::array<Asiento,150> Util::generarAsiento(){
+
+
+array<Asiento,150> Util::generarAsiento(){
     Asiento asiento[150];
     char letras = ["ABCDEF"];
     for(int i = 0;i<25;i++){
         for(int j=0;j<6; j++){
-            asiento[i*6+ j].nasiento = toString(i)+ letras[j]);
-            asiento[i*6+j].ocupado=false;
+            asiento[i*6+ j].NAsiento = toString(i)+ letras[j]);
+            asiento[i*6+j].Ocupado=false;
+        }
     }
-   }
     return asiento;
+}
+
+void Util::imprimirAsiento(array<Asiento,150> asiento){
+    for(int i=0;i<150;i++){
+        if(asiento[i].ocupado==false){
+            cout<<asiento[i].nasiento;
+        }
     }
-    
-    void Util::imprimirAsiento(std::array<Asiento,150> asiento){
-        for(int i=0;i<150;i++){
-                if(asiento[i].ocupado==false)
-                {
-                    cout<<asiento[i].nasiento;}}
+}
 
-
-
-    }
-bool Util::verificarAsiento(string nasiento,std::array<Asiento,150> asiento){
-    bool ocupado = false
+bool Util::verificarAsiento(string nasiento,array<Asiento,150> asiento){
+    bool ocupado = false;
     for(int i=0;i<150;i++){
         if(asiento[i].nasiento==nasiento){
             if(asiento[i].ocupado==true){
-                ocupado=true
+                ocupado=true;
             }
         }
 
     }
     return ocupado;
 }
+
 void Util::menu_principal(){
      bool repeticion = true;
     int opcion;

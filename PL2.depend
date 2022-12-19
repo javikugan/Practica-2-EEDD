@@ -108,3 +108,51 @@
 	<Lista.h>
 	<ArbolABB.h>
 
+1671491065 source:e:\eedd\pecl1_eedd\practica-2-eedd\main.cpp
+	<iostream>
+	"ArbolABB.h"
+	"Util.h"
+
+1671491064 e:\eedd\pecl1_eedd\practica-2-eedd\include\arbolabb.h
+	<iostream>
+	"TMaleta.h"
+	"Pasajero.h"
+
+1671491065 e:\eedd\pecl1_eedd\practica-2-eedd\include\tmaleta.h
+	<iostream>
+
+1671491065 e:\eedd\pecl1_eedd\practica-2-eedd\include\pasajero.h
+	<iostream>
+	"Lista.h"
+
+1671491065 e:\eedd\pecl1_eedd\practica-2-eedd\include\lista.h
+	<iostream>
+	"NodoLista.h"
+
+1671491065 e:\eedd\pecl1_eedd\practica-2-eedd\include\nodolista.h
+	<iostream>
+	<TMaleta.h>
+
+1671492589 e:\eedd\pecl1_eedd\practica-2-eedd\include\util.h
+	<iostream>
+	<Pasajero.h>
+	<TMaleta.h>
+	<Lista.h>
+	<ArbolABB.h>
+	<array>
+	"Asiento.h"
+
+1671491065 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\arbolabb.cpp
+	<iostream>
+	"ArbolABB.h"
+
+1671491065 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\lista.cpp
+	"Lista.h"
+
+1671491065 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\nodolista.cpp
+	"NodoLista.h"
+
+1671492321 e:\eedd\pecl1_eedd\practica-2-eedd\include\asiento.h
+	<iostream>
+	"Lista.h"
+
