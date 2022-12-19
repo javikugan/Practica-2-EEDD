@@ -86,11 +86,40 @@ using namespace std;
         return pasajero;
     }
 
+    std::array<Asiento,150> Util::generarAsiento(){
+    Asiento asiento[150];
+    char letras = ["ABCDEF"];
+    for(int i = 0;i<25;i++){
+        for(int j=0;j<6; j++){
+            asiento[i*6+ j].nasiento = toString(i)+ letras[j]);
+            asiento[i*6+j].ocupado=false;
+    }
+   }
+    return asiento;
+    }
+    
+    void Util::imprimirAsiento(std::array<Asiento,150> asiento){
+        for(int i=0;i<150;i++){
+                if(asiento[i].ocupado==false)
+                {
+                    cout<<asiento[i].nasiento;}}
 
 
 
+    }
+bool Util::verificarAsiento(string nasiento,std::array<Asiento,150> asiento){
+    bool ocupado = false
+    for(int i=0;i<150;i++){
+        if(asiento[i].nasiento==nasiento){
+            if(asiento[i].ocupado==true){
+                ocupado=true
+            }
+        }
 
-void Util::menu_principal(ArbolABB* pasajeros){
+    }
+    return ocupado;
+}
+void Util::menu_principal(){
      bool repeticion = true;
     int opcion;
 
@@ -118,13 +147,11 @@ void Util::menu_principal(ArbolABB* pasajeros){
         //Alternativas
         switch (opcion) {
         case 1:
-            menu_anadir_Pasajero(pasajeros);
+            menu_anadir_Pasajero();
             break;
         case 2:
-            menu_modificar(pasajeros);
             break;
         case 3:
-            menu_borrar(pasajeros);
             break;
         case 4:
             break;
@@ -145,7 +172,7 @@ void Util::menu_principal(ArbolABB* pasajeros){
     } while(repeticion);
 }
 
-void Util::menu_anadir_Pasajero(ArbolABB* pasajeros){
+void Util::menu_anadir_Pasajero(){
     bool repeticion = true;
     int opcion;
     string dniinp;
@@ -180,10 +207,11 @@ void Util::menu_anadir_Pasajero(ArbolABB* pasajeros){
             break;
         }
     }while(repeticion);
+    Util::menu_principal();
 
 }
 
-void Util::menu_modificar(ArbolABB* pasajeros){
+-void Util::menu_modificar(ArbolABB* pasajeros){
 
     bool repeticion = true;
     int opcion;
@@ -465,5 +493,9 @@ void Util::leerPasajero(Pasajero p){
 void Util::leerEquipaje(Pasajero p){
     p.equipaje->recorrerLista();
 }
+
+
+
+
 
 
