@@ -79,7 +79,16 @@ void Lista::recorrerLista(){
     pnodo aux;
     aux = cabeza;
     while(aux){
-        cout << aux->maleta.PNR << "-> ";
+        cout << "\n \tPNR Maleta: ";
+        cout << aux->maleta.PNR;
+        cout << "\n \tnumero de bulto: ";
+        cout << aux->maleta.nbulto;
+        cout << "\n \tPeso: ";
+        cout << aux->maleta.peso;
+        cout << "\n \tPeso: ";
+        cout << aux->maleta.tipo;
+        cout << "\n";
+
         aux = aux->siguiente;
     }
     cout << endl;
