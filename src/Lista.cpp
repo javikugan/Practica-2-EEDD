@@ -17,13 +17,13 @@ void Lista::insertarNodo(TMaleta m) {
     if (listaVacia()){
 
         cabeza = new NodoLista(m, NULL);
-        final=cabeza;
+        finall=cabeza;
 
     }else{
 
         aux= new NodoLista(m,NULL);
-        final->siguiente=aux;
-        final=aux;
+        finall->siguiente=aux;
+        finall=aux;
     }
 }
 void Lista::borrarNodo(TMaleta m) {
@@ -38,7 +38,7 @@ void Lista::borrarNodo(TMaleta m) {
     else{
 
         anterior->siguiente = actual->siguiente;
-        if(actual==final) final=anterior;
+        if(actual==finall) finall=anterior;
 
     }
     actual->siguiente=NULL;

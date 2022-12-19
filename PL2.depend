@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1670885348 source:z:\universidad\eedd\practica-2-eedd\main.cpp
+1671467036 source:z:\universidad\eedd\practica-2-eedd\main.cpp
 	<iostream>
+	"ArbolABB.h"
+	"Util.h"
 
-1670886616 source:z:\universidad\eedd\practica-2-eedd\src\arbolabb.cpp
+1671463446 source:z:\universidad\eedd\practica-2-eedd\src\arbolabb.cpp
 	<iostream>
 	"ArbolABB.h"
 
-1670943721 z:\universidad\eedd\practica-2-eedd\include\arbolabb.h
+1671463465 z:\universidad\eedd\practica-2-eedd\include\arbolabb.h
 	<iostream>
 	"TMaleta.h"
 	"Pasajero.h"
@@ -14,19 +16,22 @@
 1670930780 source:z:\universidad\eedd\practica-2-eedd\src\nodolista.cpp
 	"NodoLista.h"
 
-1670930780 z:\universidad\eedd\practica-2-eedd\include\nodolista.h
-	"TMaleta.h"
+1671454266 z:\universidad\eedd\practica-2-eedd\include\nodolista.h
+	<iostream>
+	<TMaleta.h>
 
-1670930913 z:\universidad\eedd\practica-2-eedd\include\tmaleta.h
+1671454266 z:\universidad\eedd\practica-2-eedd\include\tmaleta.h
 	<iostream>
 
-1670934475 source:z:\universidad\eedd\practica-2-eedd\src\lista.cpp
+1671462026 source:z:\universidad\eedd\practica-2-eedd\src\lista.cpp
 	"Lista.h"
 
-1670934467 z:\universidad\eedd\practica-2-eedd\include\lista.h
+1671462193 z:\universidad\eedd\practica-2-eedd\include\lista.h
+	<iostream>
 	"NodoLista.h"
 
-1670932603 z:\universidad\eedd\practica-2-eedd\include\pasajero.h
+1671469689 z:\universidad\eedd\practica-2-eedd\include\pasajero.h
+	<iostream>
 	"Lista.h"
 
 1670932603 ated upstream
@@ -90,4 +95,15 @@
 
 1671439804 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoArbol.h
 	<Pasajero.h>
+
+1671469803 source:z:\universidad\eedd\practica-2-eedd\src\util.cpp
+	<Util.h>
+	<cstdlib>
+	<iostream>
+
+1671469803 z:\universidad\eedd\practica-2-eedd\include\util.h
+	<iostream>
+	<Pasajero.h>
+	<TMaleta.h>
+	<Lista.h>
 

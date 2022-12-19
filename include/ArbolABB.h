@@ -6,12 +6,12 @@
 using namespace std;
 class NodoArbol {
     private:
-        Pasajero* pasajero;
+        Pasajero pasajero;
         NodoArbol* izq;
         NodoArbol* der;
         friend class ArbolABB;
     public:
-        NodoArbol(Pasajero* pas, NodoArbol* izquierdo = nullptr, NodoArbol* derecho = nullptr) {
+        NodoArbol(Pasajero pas, NodoArbol* izquierdo = nullptr, NodoArbol* derecho = nullptr) {
             pasajero = pas;
             izq = izquierdo;
             der = derecho;
@@ -35,7 +35,7 @@ class ArbolABB {
    ~ArbolABB() { Podar(raiz); }
 
    // Insertar en �rbol ordenado:
-   void Insertar(Pasajero* p);
+   void Insertar(Pasajero p);
 
    // Borrar un elemento del �rbol:
    void Borrar(string PNRPas);
@@ -61,9 +61,8 @@ class ArbolABB {
    void Raiz() { actual = raiz; }
 
    // Aplicar una funci�n a cada elemento del �rbol:
-   void InOrden(void (*func)(Pasajero&) , NodoArbol *nodo=NULL, bool r=true);
-   void PreOrden(void (*func)(Pasajero&) , NodoArbol *nodo=NULL, bool r=true);
-   void PostOrden(void (*func)(Pasajero&) , NodoArbol *nodo=NULL, bool r=true);
+    void PreOrden (NodoArbol* nodo, bool (*callback)(Pasajero, void*), void* args);
+    void InOrden(NodoArbol* nodo, bool (*callback)(Pasajero, void*), void* args);
 
 
   private:

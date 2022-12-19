@@ -3,15 +3,13 @@
 #ifndef LISTA_H
 #define LISTA_H
 
-#include <NodoLista.h>
-#include <Pasajero.h>
-#include <TMaleta.h>
+#include "NodoLista.h"
 
 class Lista
 {
     public:
 
-        Lista(){cabeza = actual = final = NULL;}
+        Lista(){cabeza = actual = finall = NULL;}
         ~Lista();
         void insertarNodo(TMaleta m);
         void borrarNodo(TMaleta m);
@@ -24,7 +22,9 @@ class Lista
         void recorrerLista();
 
     private:
-        pnodo cabeza, actual, final;
+        NodoLista *cabeza;
+        NodoLista *finall;
+        NodoLista *actual;
 
 };
 

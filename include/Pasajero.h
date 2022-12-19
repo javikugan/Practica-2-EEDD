@@ -1,10 +1,10 @@
 #include <iostream>
-
+#include "Lista.h"
 
 #ifndef PASAJERO
 #define PASAJERO
 
-#include <Lista.h>
+
 using namespace std;
 
 struct Pasajero{
@@ -18,8 +18,8 @@ struct Pasajero{
     string fechavuelo;
     string horasal;
     string nasiento;
-    string locequip;
     Lista* equipaje;
+
 };
 
 #endif // PASAJERO

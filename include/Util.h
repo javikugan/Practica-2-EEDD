@@ -18,5 +18,9 @@ namespace Util{
     string generar_hora_salida();
     string generar_destino();
     Pasajero generar_pasajero();
+    void menu_principal();
+    void menu_anadir_Pasajero();
+
+}
 
 #endif
