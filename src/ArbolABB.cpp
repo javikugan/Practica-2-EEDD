@@ -80,39 +80,32 @@ void ArbolABB::Borrar(string PNRPas)
    }
 }
 
-// Recorrido de �rbol en inorden, aplicamos la funci�n func, que tiene
-// el prototipo:
-// void func(int&);
-void ArbolABB::InOrden(void (*func)(int&) , NodoArbol *nodo, bool r)
-{
-   if(r) nodo = raiz;
-   if(nodo->izquierdo) InOrden(func, nodo->izq, false);
-   func(nodo->dato);
-   if(nodo->derecho) InOrden(func, nodo->der, false);
+void ArbolABB::PreOrden(NodoArbol* nodo, bool (*callback)(Pasajero*, void*), void* args){
+    if (nodo != nullptr) {
+        if (callback(nodo->pasajero, args))
+            return;
+        PreOrden (nodo->izq, callback, args);
+        PreOrden (nodo->der, callback, args);
+    }
 }
 
-// Recorrido de �rbol en preorden, aplicamos la funci�n func, que tiene
-// el prototipo:
-// void func(int&);
-void ArbolABB::PreOrden(void (*func)(int&), NodoArbol *nodo, bool r)
-{
-   if(r) nodo = raiz;
-   func(nodo->dato);
-   if(nodo->izquierdo) PreOrden(func, nodo->izq, false);
-   if(nodo->derecho) PreOrden(func, nodo->der, false);
+void ArbolABB::PostOrden(NodoArbol* nodo, bool (*callback)(CentralPaqueteria*, void*), void* args){
+    if (nodo != nullptr) {
+        PostOrden (nodo->izq, callback, args);
+        PostOrden (nodo->der, callback, args);
+        if (callback(nodo->pasajero, args))
+            return;
+    }
 }
 
-// Recorrido de �rbol en postorden, aplicamos la funci�n func, que tiene
-// el prototipo:
-// void func(int&);
-void ArbolABB::PostOrden(void (*func)(int&), NodoArbol *nodo, bool r)
-{
-   if(r) nodo = raiz;
-   if(nodo->izquierdo) PostOrden(func, nodo->izq, false);
-   if(nodo->derecho) PostOrden(func, nodo->der, false);
-   func(nodo->pasajero);
+void ArbolABB::InOrden(NodoArbol* nodo, bool (*callback)(Pasajero*, void*), void* args){
+    if (nodo != nullptr) {
+        InOrden(nodo->izq, callback, args);
+        if (callback(nodo->pasajero, args))
+            return;
+        InOrden(nodo->der, callback, args);
+    }
 }
-
 // Buscar un valor en el �rbol
 bool ArbolABB::Buscar(string PNRPas)
 {
@@ -122,7 +115,7 @@ bool ArbolABB::Buscar(string PNRPas)
    while(!Vacio(actual)) {
       if(PNRPas == actual->pasajero->PNR) return true; // int encontrado
       else if(PNRPas > actual->pasajero->PNR) actual = actual->der; // Seguir
-      else if(PNRPas < actual->pasajero) actual = actual->izq;
+      else if(PNRPas < actual->pasajero->PNR) actual = actual->izq;
    }
    return false; // No est� en �rbol
 }

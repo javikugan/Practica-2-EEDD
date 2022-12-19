@@ -374,8 +374,8 @@ void menu_borrar_bulto()
         //titulo del menu
         cout << "\n\tMENU BORRAR BULTO\n";
         //opciones del menú
-        cout << "\n\tBorrar algún bulto del equipaje de un pasajero\n "
-        cout << "\t0.Salir\n"
+        cout << "\n\tBorrar algún bulto del equipaje de un pasajero\n ";
+        cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
         cout << "\n \tOpcion: ";
@@ -386,7 +386,7 @@ void menu_borrar_bulto()
             menu_borrar_bulto();
             break;
         case 0:
-            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            repeticion = false; //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
             break;
         }
 
@@ -407,8 +407,8 @@ void modificar_equipaje()
         //titulo del menu
         cout << "\n\tMENU MODIFICAR DATOS DE EQUIPAJE\n";
         //opciones del menú
-        cout << "\n\tModificar los datos del equipaje de un pasajer\n "
-        cout << "\t0.Salir\n"
+        cout << "\n\tModificar los datos del equipaje de un pasajer\n ";
+        cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
         cout << "\n \tOpcion: ";
@@ -419,7 +419,7 @@ void modificar_equipaje()
             menu_modificar_equipaje();
             break;
         case 0:
-            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            repeticion = false; //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
             break;
         }
 
@@ -440,8 +440,8 @@ void menu_cambiar_bulto()
         //titulo del menu
         cout << "\n\tMENU CAMBIAR BULTO DE EQUIPAJE DE UN PASAJERO\n";
         //opciones del menú
-        cout << "\n\t Cambiar un bulto del equipaje de un pasajero a otro distinto\n "
-        cout << "\t0.Salir\n"
+        cout << "\n\t Cambiar un bulto del equipaje de un pasajero a otro distinto\n ";
+        cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
         cout << "\n \tOpcion: ";
@@ -452,7 +452,7 @@ void menu_cambiar_bulto()
             menu_cambiar_bulto();
             break;
         case 0:
-            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            repeticion = false; //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
             break;
         }
 
