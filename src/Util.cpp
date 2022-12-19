@@ -86,9 +86,9 @@ using namespace std;
         return pasajero;
     }
 
-    std::array<Asiento,150>Util::generarAsiento(){
+    std::array<Asiento,150> Util::generarAsiento(){
     Asiento asiento[150];
-    char letras = ["ABCDEF"]
+    char letras = ["ABCDEF"];
     for(int i = 0;i<25;i++){
         for(int j=0;j<6; j++){
             asiento[i*6+ j].nasiento = toString(i)+ letras[j]);
@@ -97,6 +97,7 @@ using namespace std;
    }
     return asiento;
     }
+    
     void Util::imprimirAsiento(std::array<Asiento,150> asiento){
         for(int i=0;i<150;i++){
                 if(asiento[i].ocupado==false)
