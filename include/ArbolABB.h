@@ -1,8 +1,7 @@
 #include <iostream>
 #include "TMaleta.h"
 #include "Pasajero.h"
-#ifndef ARBOL
-#define ARBOL
+
 
 using namespace std;
 class NodoArbol {
@@ -42,7 +41,7 @@ class ArbolABB {
    void Borrar(string PNRPas);
 
    // Funci�n de b�squeda:
-   Pasajero Buscar(string PNRPas);
+   bool Buscar(string PNRPas);
 
    // Comprobar si el �rbol est� vac�o:
    bool Vacio(NodoArbol *r) { return r==NULL; }
@@ -71,5 +70,3 @@ class ArbolABB {
    void Podar(NodoArbol* &);
 
 };
-
-#endif // Arbol

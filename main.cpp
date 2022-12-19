@@ -4,7 +4,7 @@
 int main() {
     std::cout << "Hello World!";
     ArbolABB* Avion = new ArbolABB();
-    Util::menu_principal(Avion);
+    Util::menu_principal();
     Avion->Insertar(Util::generar_pasajero());
 
     return 0;
