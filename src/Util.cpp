@@ -1,4 +1,6 @@
 #include "Util.h"
+#include "menu.h"
+#include <cstlib>
 
 
 using namespace std;
@@ -90,7 +92,65 @@ genera de forma aleatoria una hora de salida  de entre 4 horas distintas estable
         return PNR ;
     };
 
+void opcion1();
+void opcion2();
+void opcion3();
+void opcion4();
+void opcion5();
+void opcion6();
+void opcion7();
+void opcion8();
+void opcion9();
+void opcion0();
 
-    bool running = true;
+int main(){
+    int op;
+    do{
+        system("cls");
+        op = menu(0,0,"Opcion 1", "Opcion2",  "Opcion3", "Opcion4", "Opcion5", "Opcion6", "Opcion7", "Opcion8", "Opcion9", "Salir");
+        switch(op) {
+        case 1:
+            opcion1("Insertar un nuevo registro de forma manual con un solo bulto en su lista de equipaje mientras queden asientos libres");
+        break;
+
+        case 2;
+            opcion2("Modificar los campos de un registro excepto el equipaje");
+        break;
+
+        case 3;
+            opcion3("Borrar registro del árbol");
+        break;
+
+        case 4;
+            opcion4("Mostrar datos de un pasajero concreto buscando por su PNR");
+        break;
+
+        case 5;
+            opcion5("Mostrar datos de equipaje de un pasajero identificado por su PNR");
+        break;
+
+        case 6;
+            opcion6("Añadir nuevo bulto al equipaje de un pasajero dado");
+        break;
+
+        case 7;
+            opcion7("Borrar algún bulto del equipaje de un pasajero");
+        break;
+
+        case 8;
+            opcion8("Modificar los datos del equipaje de un pasajero dado");
+        break;
+
+        case 9;
+            opcion9("Cambiar un bulto concreto del equipaje de un pasajero a otro diferente, ambos identificados por su PNR");
+        break;
+
+
+        }
+
+    }while(true);
+
+    return 0;
+}
 
     TMaleta Util::generar_maleta()
