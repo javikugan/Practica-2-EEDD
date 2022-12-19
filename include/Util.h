@@ -5,7 +5,9 @@
 #include <Pasajero.h>
 #include <TMaleta.h>
 #include <Lista.h>
-
+#include <ArbolABB.h>
+#include <array>
+#include "Asiento.h"
 using namespace std;
 
 namespace Util{
@@ -17,6 +19,8 @@ namespace Util{
     string generar_nombres();
     string generar_hora_salida();
     string generar_destino();
+    array<Asiento,150> generarAsiento();
+    void imprimirAsiento(array<Asiento,150> asiento){
     Pasajero generar_pasajero();
     void menu_principal();
     void menu_anadir_Pasajero();
