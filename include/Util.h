@@ -5,6 +5,7 @@
 #include <Pasajero.h>
 #include <TMaleta.h>
 #include <Lista.h>
+#include <ArbolABB.h>
 
 using namespace std;
 
@@ -18,9 +19,17 @@ namespace Util{
     string generar_hora_salida();
     string generar_destino();
     Pasajero generar_pasajero();
-    void menu_principal();
-    void menu_anadir_Pasajero();
-
+    void menu_principal(ArbolABB* pasajeros);
+    void menu_anadir_Pasajero(ArbolABB* pasajeros);
+    void menu_borrar(ArbolABB* pasajeros);
+    void menu_modificar(ArbolABB* pasajeros);
+    void menu_mostrar_pasajero(ArbolABB* pasajeros);
+    void menu_mostrar_equipaje(ArbolABB* pasajeros);
+    void menu_borrar_equipaje(ArbolABB* pasajeros);
+    void menu_modifica_equipaje(ArbolABB* pasajeros);
+    void menu_mover_equipaje(ArbolABB* pasajeros);
+    void leerPasajero(Pasajero p);
+    void leerEquipaje(Pasajero p);
 }
 
 #endif
