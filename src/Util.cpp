@@ -1,5 +1,5 @@
 #include "Util.h"
-
+#include <cstdlib>
 #include <iostream>
 
 
@@ -84,65 +84,402 @@ DNI - formados por 8 cifras - 1 letra al final (MAY�SCULA)
         pasajero.origen= "Madrid";
         pasajero.PNR = generar_PNR_aleat();
     }
-void opcion1();
-void opcion2();
-void opcion3();
-void opcion4();
-void opcion5();
-void opcion6();
-void opcion7();
-void opcion8();
-void opcion9();
-void opcion0();
+void menu_principal();
+void menu_inserta();
+void menu_modifica();
+void menu_borrar_registro();
+void menu_pasajero();
+void menu_equipaje();
+void menu_añadir_bulto();
+void menu_borrar_bulto();
+void modificar_equipaje();
+void menu cambiar_bulto();
 
-int main(){
-    int op;
-    do{
-        system("cls");
-        op = menu(0,0,"Opcion 1", "Opcion2",  "Opcion3", "Opcion4", "Opcion5", "Opcion6", "Opcion7", "Opcion8", "Opcion9", "Salir");
-        switch(op) {
-        case 1:
-            opcion1("Insertar un nuevo registro de forma manual con un solo bulto en su lista de equipaje mientras queden asientos libres");
-        break;
+int main()
+{
 
-        case 2;
-            opcion2("Modificar los campos de un registro excepto el equipaje");
-        break;
-
-        case 3;
-            opcion3("Borrar registro del �rbol");
-        break;
-
-        case 4;
-            opcion4("Mostrar datos de un pasajero concreto buscando por su PNR");
-        break;
-
-        case 5;
-            opcion5("Mostrar datos de equipaje de un pasajero identificado por su PNR");
-        break;
-
-        case 6;
-            opcion6("A�adir nuevo bulto al equipaje de un pasajero dado");
-        break;
-
-        case 7;
-            opcion7("Borrar alg�n bulto del equipaje de un pasajero");
-        break;
-
-        case 8;
-            opcion8("Modificar los datos del equipaje de un pasajero dado");
-        break;
-
-        case 9;
-            opcion9("Cambiar un bulto concreto del equipaje de un pasajero a otro diferente, ambos identificados por su PNR");
-        break;
-
-
-        }
-
-    }while(true);
-
+    cin.get();
+    cin.get();
     return 0;
 }
+void menu_principal()
+{
+    bool repeticion = true;
+    int opcion;
 
-    TMaleta Util::generar_maleta()
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU PRINCIPAL\n";
+        //opciones del menú
+        cout << "\n\t1.Insertar nuevo registro con un solo bulto en la lista de equipaje\n "
+        cout << "\t2.Modificar los campos de un registro, exceptuando el equipaje\n"
+        cout << "\t3.Borrar un registro del árbol\n"
+        cout << "\t4.Mostrar los datos de un pasajero\n"
+        cout << "\t5.Mostrar los datos del equipaje de un pasajero\n"
+        cout << "\t6.Añadir un nuevo bulto al equipaje de un pasajero\n"
+        cout << "\t7.Borrar algún bulto del equipaje de un pasajero\n"
+        cout << "\t8. Modificar los datos del equipaje de un pasajero\n "
+        cout << "\t9.Cambiar un bulto del equipaje de un pasajero a otro distinto\n"
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_inserta();
+            break;
+        case 2:
+            menu_modifica();
+            break;
+        case 3:
+            menu_borrar_registro();
+            break;
+        case 4:
+            menu_pasajero();
+            break;
+        case 5:
+            menu_equipaje();
+            break;
+        case 6:
+            menu_añadir_bulto();
+            break;
+        case 7:
+            menu_borrar_bulto();
+            break;
+        case 8:
+            menu_modificar_equipaje();
+            break;
+        case 9:
+            menu_cambiar_bulto();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_inserta()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU INSERTA\n";
+        //opciones del menú
+        cout << "\n\t1.Insertar nuevo registro con un solo bulto en la lista de equipaje\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_inserta();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_modifica()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\t\tMENU MODIFICA\n";
+        //opciones del menú
+        cout << "\n\t1.Modificar los campos de un registro, exceptuando el equipaje\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_modifica();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_borrar_registro()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU BORRAR REGISTRO\n";
+        //opciones del menú
+        cout << "\n\t1.Borrar un registro del árbol\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_borrar_registro();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_pasajero()
+{
+
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\t\ MENU PASAJERO\n";
+        //opciones del menú
+        cout << "\n\tMostrar los datos del equipaje de un pasajero"
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_pasajero();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_equipaje()
+{
+
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU EQUIPAJE\n";
+        //opciones del menú
+        cout << "\n\t1.Añadir un nuevo bulto al equipaje de un pasajeroe\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_equipaje();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_añadir_bulto()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU AÑADIR\n";
+        //opciones del menú
+        cout << "\n\t1.Añadir un nuevo bulto al equipaje de un pasajeroe\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_añadir_bulto();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_borrar_bulto()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU BORRAR BULTO\n";
+        //opciones del menú
+        cout << "\n\tBorrar algún bulto del equipaje de un pasajero\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_borrar_bulto();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void modificar_equipaje()
+{
+    bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU MODIFICAR DATOS DE EQUIPAJE\n";
+        //opciones del menú
+        cout << "\n\tModificar los datos del equipaje de un pasajer\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_modificar_equipaje();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+void menu_cambiar_bulto()
+{
+     bool repeticion = true;
+    int opcion;
+
+    do {
+        //limpiar la pantalla
+        system("cls");
+
+        //titulo del menu
+        cout << "\n\tMENU CAMBIAR BULTO DE EQUIPAJE DE UN PASAJERO\n";
+        //opciones del menú
+        cout << "\n\t Cambiar un bulto del equipaje de un pasajero a otro distinto\n "
+        cout << "\t0.Salir\n"
+
+        //leer opcion elegida por el usuario
+        cout << "\n \tOpcion: ";
+        cin >> opcion;
+        //Alternativas
+        switch (opcion) {
+        case 1:
+            menu_cambiar_bulto();
+            break;
+        case 0:
+            repeticion = false //cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
+            break;
+        }
+
+
+
+
+    } while(repeticion)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
