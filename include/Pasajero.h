@@ -19,7 +19,7 @@ struct Pasajero{
     string horasal;
     string nasiento;
     string locequip;
-    Lista equipaje;
+    Lista* equipaje;
 };
 
 #endif // PASAJERO

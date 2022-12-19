@@ -7,36 +7,38 @@ using namespace std;
 
 
 // Insertar un int en el �rbol ABB
-pnodoAbb Arbol::insertar(pnodoAbb arbol, Paciente* p)
+void ArbolABB::Insertar(Pasajero* p)
 {
-    if(arbol == NULL) {
-        return new NodoArbol(p);
-    } else {
-        if(p->getHab() <= arbol->paciente->getHab()) {
-            arbol->izq = insertar(arbol->izq, p);
-        } else {
-            arbol->der = insertar(arbol->der, p);
-        }
+    NodoArbol* padre = NULL;
+    actual = raiz;
+    while(!Vacio(actual) && p->PNR != actual->pasajero->PNR){
+        padre = actual;
+        if(p->PNR > actual->pasajero->PNR) actual = actual->der;
+        else if(p->PNR < actual->pasajero->PNR) actual = actual->izq;
     }
-    return arbol;
+    if(!Vacio(actual)) return;
+    if(Vacio(padre)) raiz = new NodoArbol(p);
+    else if(p->PNR < padre->pasajero->PNR) padre->izq = new NodoArbol(p);
+    else if(p->PNR > padre->pasajero->PNR) padre->der = new NodoArbol(p);
 }
 
+
 // Eliminar un elemento de un Arbol ABB
-void ArbolABB::Borrar(Pasajero dat)
+void ArbolABB::Borrar(string PNRPas)
 {
-   Nodo *padre = NULL;
-   Nodo *nodo;
-   Pasajero aux;
+   NodoArbol *padre = NULL;
+   NodoArbol *nodo;
+   string aux;
 
    actual = raiz;
    // Mientras sea posible que el valor est� en el �rbol
    while(!Vacio(actual)) {
-      if(dat.PNR == actual->dato.PNR) { // Si el valor est� en el nodo actual
+      if(PNRPas == actual->pasajero->PNR) { // Si el valor est� en el nodo actual
          if(EsHoja(actual)) { // Y si adem�s es un nodo hoja: lo borramos
             if(padre) // Si tiene padre (no es el nodo raiz)
                // Anulamos el puntero que le hace referencia
-               if(padre->derecho == actual) padre->derecho = NULL;
-               else if(padre->izquierdo == actual) padre->izquierdo = NULL;
+               if(padre->der == actual) padre->der = NULL;
+               else if(padre->izq == actual) padre->izq = NULL;
             delete actual; // Borrar el nodo
             actual = NULL;
             return;
@@ -45,35 +47,35 @@ void ArbolABB::Borrar(Pasajero dat)
             // Buscar nodo
             padre = actual;
             // Buscar nodo m�s izquierdo de rama derecha
-            if(actual->derecho) {
-               nodo = actual->derecho;
-               while(nodo->izquierdo) {
+            if(actual->der) {
+               nodo = actual->der;
+               while(nodo->izq) {
                   padre = nodo;
-                  nodo = nodo->izquierdo;
+                  nodo = nodo->izq;
                }
             }
             // O buscar nodo m�s derecho de rama izquierda
             else {
-               nodo = actual->izquierdo;
-               while(nodo->derecho) {
+               nodo = actual->izq;
+               while(nodo->der) {
                   padre = nodo;
-                  nodo = nodo->derecho;
+                  nodo = nodo->der;
                }
             }
             // Intercambiar valores de no a borrar u nodo encontrado
             // y continuar, cerrando el bucle. El nodo encontrado no tiene
             // por qu� ser un nodo hoja, cerrando el bucle nos aseguramos
             // de que s�lo se eliminan nodos hoja.
-            aux = actual->dato;
-            actual->dato = nodo->dato;
-            nodo->dato = aux;
+            aux = actual->pasajero->PNR;
+            actual->pasajero->PNR = nodo->pasajero->PNR;
+            nodo->pasajero->PNR = aux;
             actual = nodo;
          }
       }
       else { // Todav�a no hemos encontrado el valor, seguir busc�ndolo
          padre = actual;
-         if(dat.PNR > actual->dato.PNR) actual = actual->derecho;
-         else if(dat.PNR < actual->dato.PNR) actual = actual->izquierdo;
+         if(PNRPas > actual->pasajero->PNR) actual = actual->der;
+         else if(PNRPas < actual->pasajero->PNR) actual = actual->izq;
       }
    }
 }
@@ -81,63 +83,63 @@ void ArbolABB::Borrar(Pasajero dat)
 // Recorrido de �rbol en inorden, aplicamos la funci�n func, que tiene
 // el prototipo:
 // void func(int&);
-void ArbolABB::InOrden(void (*func)(int&) , Nodo *nodo, bool r)
+void ArbolABB::InOrden(void (*func)(int&) , NodoArbol *nodo, bool r)
 {
    if(r) nodo = raiz;
-   if(nodo->izquierdo) InOrden(func, nodo->izquierdo, false);
+   if(nodo->izquierdo) InOrden(func, nodo->izq, false);
    func(nodo->dato);
-   if(nodo->derecho) InOrden(func, nodo->derecho, false);
+   if(nodo->derecho) InOrden(func, nodo->der, false);
 }
 
 // Recorrido de �rbol en preorden, aplicamos la funci�n func, que tiene
 // el prototipo:
 // void func(int&);
-void ArbolABB::PreOrden(void (*func)(int&), Nodo *nodo, bool r)
+void ArbolABB::PreOrden(void (*func)(int&), NodoArbol *nodo, bool r)
 {
    if(r) nodo = raiz;
    func(nodo->dato);
-   if(nodo->izquierdo) PreOrden(func, nodo->izquierdo, false);
-   if(nodo->derecho) PreOrden(func, nodo->derecho, false);
+   if(nodo->izquierdo) PreOrden(func, nodo->izq, false);
+   if(nodo->derecho) PreOrden(func, nodo->der, false);
 }
 
 // Recorrido de �rbol en postorden, aplicamos la funci�n func, que tiene
 // el prototipo:
 // void func(int&);
-void ArbolABB::PostOrden(void (*func)(int&), Nodo *nodo, bool r)
+void ArbolABB::PostOrden(void (*func)(int&), NodoArbol *nodo, bool r)
 {
    if(r) nodo = raiz;
-   if(nodo->izquierdo) PostOrden(func, nodo->izquierdo, false);
-   if(nodo->derecho) PostOrden(func, nodo->derecho, false);
-   func(nodo->dato);
+   if(nodo->izquierdo) PostOrden(func, nodo->izq, false);
+   if(nodo->derecho) PostOrden(func, nodo->der, false);
+   func(nodo->pasajero);
 }
 
 // Buscar un valor en el �rbol
-bool ArbolABB::Buscar(const int dat)
+bool ArbolABB::Buscar(string PNRPas)
 {
    actual = raiz;
 
    // Todav�a puede aparecer, ya que quedan nodos por mirar
    while(!Vacio(actual)) {
-      if(dat == actual->dato) return true; // int encontrado
-      else if(dat > actual->dato) actual = actual->derecho; // Seguir
-      else if(dat < actual->dato) actual = actual->izquierdo;
+      if(PNRPas == actual->pasajero->PNR) return true; // int encontrado
+      else if(PNRPas > actual->pasajero->PNR) actual = actual->der; // Seguir
+      else if(PNRPas < actual->pasajero) actual = actual->izq;
    }
    return false; // No est� en �rbol
 }
 
 // Calcular la altura del nodo que contiene el int dat
-int ArbolABB::Altura(const int dat)
+int ArbolABB::Altura(string PNRPas)
 {
    int altura = 0;
    actual = raiz;
 
    // Todav�a puede aparecer, ya que quedan nodos por mirar
    while(!Vacio(actual)) {
-      if(dat == actual->dato) return altura; // int encontrado
+      if(PNRPas == actual->pasajero->PNR) return altura; // int encontrado
       else {
          altura++; // Incrementamos la altura, seguimos buscando
-         if(dat > actual->dato) actual = actual->derecho;
-         else if(dat < actual->dato) actual = actual->izquierdo;
+         if(PNRPas > actual->pasajero->PNR) actual = actual->der;
+         else if(PNRPas < actual->pasajero->PNR) actual = actual->izq;
       }
    }
    return -1; // No est� en �rbol
@@ -154,12 +156,12 @@ const int ArbolABB::NumeroNodos()
 
 // Funci�n auxiliar para contar nodos. Funci�n recursiva de recorrido en
 //   preorden, el proceso es aumentar el contador
-void ArbolABB::auxContador(Nodo *nodo)
+void ArbolABB::auxContador(NodoArbol *nodo)
 {
    contador++;  // Otro nodo
    // Continuar recorrido
-   if(nodo->izquierdo) auxContador(nodo->izquierdo);
-   if(nodo->derecho)   auxContador(nodo->derecho);
+   if(nodo->izq) auxContador(nodo->izq);
+   if(nodo->der)   auxContador(nodo->der);
 }
 
 // Calcular la altura del �rbol, que es la altura del nodo de mayor altura.
@@ -174,18 +176,4 @@ const int ArbolABB::AlturaArbol()
 // Funci�n auxiliar para calcular altura. Funci�n recursiva de recorrido en
 // postorden, el proceso es actualizar la altura s�lo en nodos hojas de mayor
 // altura de la m�xima actual
-void ArbolABB::auxAltura(Nodo *nodo, int a)
-{
-   // Recorrido postorden
-   if(nodo->izquierdo) auxAltura(nodo->izquierdo, a+1);
-   if(nodo->derecho)   auxAltura(nodo->derecho, a+1);
-   // Proceso, si es un nodo hoja, y su altura es mayor que la actual del
-   // �rbol, actualizamos la altura actual del �rbol
-   if(EsHoja(nodo) && a > altura) altura = a;
-}
 
-// Funci�n de prueba para recorridos del �rbol
-void Mostrar(int &d)
-{
-   cout << d << ",";
-}

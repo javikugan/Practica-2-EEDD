@@ -2,9 +2,6 @@
 #include <cstdlib>
 #include <iostream>
 
-
-using namespace std;
-
     TMaleta generar_maleta(string pnr, int n){
     TMaleta maleta;
     maleta.PNR = pnr;
@@ -53,8 +50,8 @@ DNI - formados por 8 cifras - 1 letra al final (MAY�SCULA)
         string nombre= "";
 
 
-        std::string nombres[] = {"Antonio", "David", "Juan", "Francisco", "Daniel", "Jose", "Manuel", "Teresa", "Celia", "Maria", "Lucia", "Rocio", "Ascen", "Loren", "Alvaro", "Lourdes", "Laura", "Sofia", "Mario", "Javier", "Marco", "Lara", "Luisa", "Sandra", "Adrian", "Luis", "Fernando", "Domingo", "Africa", "Andrea", "Sergio", "Adrian", "Pablo", "Sandra", "Marta", "Valeria", "Paula", "Luna", "Diana", "Noelia", "Marcos", "Ivan", "Jaime", "Diego", "Isabel", "Blanca", "Ana"};
-        std::string apellido[] = {"Pascual", "Rodriguez", "Polanco", "Nu�ez", "Gonzalez", "Aldea", "Manso", "Perez", "Cebrecos", "Moglovejo", "Fernandez", "Roma", "Ortiz", "Vi�as", "Vaca", "Jarillo", "Cembell�n", "Alberti", "Martinez", "S�nchez","Saiz","Arribas", "Garcia", "Gomez", "Lopez", "Martin", "Cuesta", "Mogollo", "Simon", "Pe�a", "Velasco", "Jurado", "Loro", "Blanco", "Honrado", "Gil", "de Cos", "Marquez", "Diaz", "Palomino", "Tesifonte", "Luzdivino", "Dombina", "Calleja", "Ruiz", "Oristila", "Bonifacio"};
+        string nombres[] = {"Antonio", "David", "Juan", "Francisco", "Daniel", "Jose", "Manuel", "Teresa", "Celia", "Maria", "Lucia", "Rocio", "Ascen", "Loren", "Alvaro", "Lourdes", "Laura", "Sofia", "Mario", "Javier", "Marco", "Lara", "Luisa", "Sandra", "Adrian", "Luis", "Fernando", "Domingo", "Africa", "Andrea", "Sergio", "Adrian", "Pablo", "Sandra", "Marta", "Valeria", "Paula", "Luna", "Diana", "Noelia", "Marcos", "Ivan", "Jaime", "Diego", "Isabel", "Blanca", "Ana"};
+        string apellido[] = {"Pascual", "Rodriguez", "Polanco", "Nu�ez", "Gonzalez", "Aldea", "Manso", "Perez", "Cebrecos", "Moglovejo", "Fernandez", "Roma", "Ortiz", "Vi�as", "Vaca", "Jarillo", "Cembell�n", "Alberti", "Martinez", "S�nchez","Saiz","Arribas", "Garcia", "Gomez", "Lopez", "Martin", "Cuesta", "Mogollo", "Simon", "Pe�a", "Velasco", "Jurado", "Loro", "Blanco", "Honrado", "Gil", "de Cos", "Marquez", "Diaz", "Palomino", "Tesifonte", "Luzdivino", "Dombina", "Calleja", "Ruiz", "Oristila", "Bonifacio"};
 
         nombre = nombre + " " + nombres[rand()%46] + " " +  apellido[rand()%4] + " " + apellido[rand()%46];
         return nombre;
@@ -77,12 +74,13 @@ DNI - formados por 8 cifras - 1 letra al final (MAY�SCULA)
         Pasajero pasajero;
         pasajero.dni = dni_aleat();
         pasajero.destino = "Murcia";
-        Pasajero.fechavuelo = "25/12/2022"
-        pasajero.horasal= "23:30"
-        pasajero.idVuelo = "IB3040"
+        pasajero.fechavuelo = "25/12/2022";
+        pasajero.horasal= "23:30";
+        pasajero.idVuelo = "IB3040";
         pasajero.nombrecompl= generar_nombres();
         pasajero.origen= "Madrid";
         pasajero.PNR = generar_PNR_aleat();
+        return pasajero;
     }
 void menu_principal();
 void menu_inserta();
@@ -238,9 +236,6 @@ void menu_borrar_registro()
     bool repeticion = true;
     int opcion;
 
-    do {
-        //limpiar la pantalla
-        system("cls");
 
         //titulo del menu
         cout << "\n\tMENU BORRAR REGISTRO\n";

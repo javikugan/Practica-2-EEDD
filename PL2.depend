@@ -60,20 +60,20 @@
 	"TMaleta.h"
 	"Pasajero.h"
 
-1671407117 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
+1671408119 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
 	<iostream>
 
-1671407261 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
+1671443072 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
 	<iostream>
 	<Lista.h>
 
-1671407117 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
+1671441926 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
 	<iostream>
 	<NodoLista.h>
 	<Pasajero.h>
 	<TMaleta.h>
 
-1671407117 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
+1671408119 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
 	<iostream>
 	<TMaleta.h>
 
@@ -84,4 +84,10 @@
 
 1670947899 shed changes
 	"NodoLista.h"
+
+1671439306 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/NodoArbol.cpp
+	"NodoArbol.h"
+
+1671439804 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoArbol.h
+	<Pasajero.h>
 

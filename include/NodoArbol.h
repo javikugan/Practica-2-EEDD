@@ -1,16 +1,18 @@
 #ifndef NODOARBOL_H
 #define NODOARBOL_H
-
+#include <Pasajero.h>
 
 class NodoArbol
 {
     public:
-        NodoArbol();
+        NodoArbol(Pasajero* p);
         virtual ~NodoArbol();
+        Pasajero* pasajero;
+        NodoArbol *izq;
+        NodoArbol *der;
 
-    protected:
+        friend class Arbol;
 
-    private:
 };
-
+typedef NodoArbol* pnodoAbb;
 #endif // NODOARBOL_H

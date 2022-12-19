@@ -1,11 +1,13 @@
 #include "NodoArbol.h"
 
-NodoArbol::NodoArbol()
+NodoArbol::NodoArbol(Pasajero* p)
 {
-    //ctor
+    this->pasajero = p;
+    this->izq = nullptr;
+    this->der = nullptr;
 }
 
 NodoArbol::~NodoArbol()
 {
-    //dtor
+
 }

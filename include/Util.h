@@ -12,11 +12,11 @@ namespace Util{
 
     void imprimirMaleta(TMaleta maleta);
     string dni_aleat();
-    TMaleta generar_maleta();
+    TMaleta generar_maleta(string pnr, int n);
     string generar_PNR_aleat();
     string generar_nombres();
     string generar_hora_salida();
     string generar_destino();
+    Pasajero generar_pasajero();
 
-}
 #endif
