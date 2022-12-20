@@ -18,9 +18,11 @@ class Lista
         void esFinal();
         void esSiguiente();
         bool esActual();
-        TMaleta valorActual();
+        TMaleta* valorActual();
+        TMaleta* buscarMaleta(cin PNR);
         void recorrerLista();
         int longitudLista();
+        void borrarNodoString(cin PNR);
 
     private:
         NodoLista *cabeza;

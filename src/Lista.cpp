@@ -106,3 +106,42 @@ int Lista::longitudLista(){
     cout << endl;
 
 }
+
+void Lista::borrarNodoString(cin PNR){
+    pnodo anterior;
+    string Pnr=to_string(PNR);
+    actual = cabeza;
+    while (actual->maleta.PNR!=Pnr && (actual->siguiente)!=NULL){
+        anterior=actual;
+        actual=actual->siguiente;
+    }
+    if(actual==cabeza) cabeza = actual->siguiente;
+
+    else{
+
+        anterior->siguiente = actual->siguiente;
+        if(actual==finall) finall=anterior;
+
+    }
+    actual->siguiente=NULL;
+    delete actual;
+}
+
+TMaleta* Lista::buscarMaleta(cin PNG){
+     pnodo anterior;
+    string Pnr=to_string(PNR);
+    actual = cabeza;
+    while (actual->maleta.PNR!=Pnr && (actual->siguiente)!=NULL){
+        anterior=actual;
+        actual=actual->siguiente;
+    }
+    if(actual==cabeza) cabeza = actual->siguiente;
+
+    else{
+
+        anterior->siguiente = actual->siguiente;
+        if(actual==finall) finall=anterior;
+
+    }
+    return actual->maleta;
+}

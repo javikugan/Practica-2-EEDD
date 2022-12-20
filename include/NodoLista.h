@@ -9,7 +9,7 @@
 class NodoLista
 {
     public:
-        NodoLista(TMaleta m, NodoLista *sig = NULL)
+        NodoLista(TMaleta* m, NodoLista *sig = NULL)
             {
             maleta = m;
             siguiente = sig;

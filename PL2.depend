@@ -63,39 +63,56 @@
 
 1671302885 source:c:\users\equipo\documents\uni 2º año\estructura de datos\practica-2-eedd\src\nodolista.cpp
 
-1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/main.cpp
+1671494792 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/main.cpp
 	<iostream>
+	<iostream>
+	"ArbolABB.h"
+	"Util.h"
 
-1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/ArbolABB.cpp
+1671534803 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/ArbolABB.cpp
+	<iostream>
+	"ArbolABB.h"
 	<iostream>
 	"ArbolABB.h"
 
-1670947899 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/ArbolABB.h
+1671534813 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/ArbolABB.h
+	<iostream>
+	"TMaleta.h"
+	"Pasajero.h"
 	<iostream>
 	"TMaleta.h"
 	"Pasajero.h"
 
-1671408119 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
+1671454268 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
+	<iostream>
 	<iostream>
 
-1671443072 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
+1671487382 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
 	<iostream>
 	<Lista.h>
+	<iostream>
+	"Lista.h"
 
-1671441926 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
+1671496498 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
 	<iostream>
 	<NodoLista.h>
 	<Pasajero.h>
 	<TMaleta.h>
+	<iostream>
+	"NodoLista.h"
 
-1671408119 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
+1671454268 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
+	<iostream>
+	<TMaleta.h>
 	<iostream>
 	<TMaleta.h>
 
-1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Lista.cpp
+1671496472 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Lista.cpp
+	"Lista.h"
 	"Lista.h"
 
-1670947899 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/NodoLista.cpp
+1670930782 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/NodoLista.cpp
+	"NodoLista.h"
 
 1670947899 shed changes
 	"NodoLista.h"
@@ -120,31 +137,6 @@
 	<Lista.h>
 	<ArbolABB.h>
 
-1671494792 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/main.cpp
-	<iostream>
-	"ArbolABB.h"
-	"Util.h"
-
-1671534813 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/ArbolABB.h
-	<iostream>
-	"TMaleta.h"
-	"Pasajero.h"
-
-1671454268 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/TMaleta.h
-	<iostream>
-
-1671487382 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Pasajero.h
-	<iostream>
-	"Lista.h"
-
-1671496498 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Lista.h
-	<iostream>
-	"NodoLista.h"
-
-1671454268 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/NodoLista.h
-	<iostream>
-	<TMaleta.h>
-
 1671534890 /home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/include/Util.h
 	<iostream>
 	<Pasajero.h>
@@ -152,17 +144,54 @@
 	<Lista.h>
 	<ArbolABB.h>
 
-1671534803 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/ArbolABB.cpp
+1671495875 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Util.cpp
+	<Util.h>
+	<cstdlib>
+	<iostream>
+
+1671542159 source:e:\eedd\pecl1_eedd\practica-2-eedd\main.cpp
+	<iostream>
+	"ArbolABB.h"
+	"Util.h"
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\arbolabb.h
+	<iostream>
+	"TMaleta.h"
+	"Pasajero.h"
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\tmaleta.h
+	<iostream>
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\pasajero.h
+	<iostream>
+	"Lista.h"
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\lista.h
+	<iostream>
+	"NodoLista.h"
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\nodolista.h
+	<iostream>
+	<TMaleta.h>
+
+1671542159 e:\eedd\pecl1_eedd\practica-2-eedd\include\util.h
+	<iostream>
+	<Pasajero.h>
+	<TMaleta.h>
+	<Lista.h>
+	<ArbolABB.h>
+
+1671542159 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\arbolabb.cpp
 	<iostream>
 	"ArbolABB.h"
 
-1671496472 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Lista.cpp
+1671542159 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\lista.cpp
 	"Lista.h"
 
-1670930782 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/NodoLista.cpp
+1671542159 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\nodolista.cpp
 	"NodoLista.h"
 
-1671495875 source:/home/javikugan/Documents/Universidad/EEDD/Practica-2-EEDD/src/Util.cpp
+1671543511 source:e:\eedd\pecl1_eedd\practica-2-eedd\src\util.cpp
 	<Util.h>
 	<cstdlib>
 	<iostream>

@@ -289,9 +289,9 @@ void Util::menu_mostrar_pasajero(ArbolABB* pasajeros){
         system("cls");
 
         //titulo del menu
-        cout << "\n\t\t\tMENU MOSTRAR EQUIPAJE\n";
+        cout << "\n\t\t\tMENU MOSTRAR PASAJERO\n";
         //opciones del menú
-        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\n\t1.Mostrar un Pasajero\n ";
         cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
@@ -335,7 +335,7 @@ void Util::menu_mostrar_equipaje(ArbolABB* pasajeros){
         case 1:
             cout << "\n \tPNR del pasajero: ";
             cin >> PNRimp;
-
+            leerEquipaje(pasajeros->Buscar(PNRimp)));
 
             break;
         case 0:
@@ -357,7 +357,7 @@ void Util::menu_borrar_equipaje(ArbolABB* pasajeros){
         //titulo del menu
         cout << "\n\t\t\tMENU MOSTRAR\n";
         //opciones del menú
-        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\n\t1.Borrar un Equipaje\n ";
         cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
@@ -368,11 +368,11 @@ void Util::menu_borrar_equipaje(ArbolABB* pasajeros){
         case 1:
             cout << "\n \tPNR del pasajero: ";
             cin >> PNRimp;
-            cout << "\n \tESTAS SEGURO? y/n: ";
-            cin >> eleccion;
-            if (eleccion == "y"){
-             pasajeros->Borrar(PNRimp);
-            }
+            Pasajero pasejero = pasajeros->Buscar(PNRimp0);
+            leerEquipaje(pasajeros);
+            cout<<"Elige Maleta:";
+            cin >>Maleta;
+            pasejero.equipaje->borrarNodoString(Maleta);
 
             break;
         case 0:
@@ -394,7 +394,7 @@ void Util::menu_modifica_equipaje(ArbolABB* pasajeros){
         //titulo del menu
         cout << "\n\t\t\tMENU MOSTRAR\n";
         //opciones del menú
-        cout << "\n\t1.Borrar un Pasajero\n ";
+        cout << "\n\t1.Cambiar un Equpaje\n ";
         cout << "\t0.Salir\n";
 
         //leer opcion elegida por el usuario
@@ -405,12 +405,20 @@ void Util::menu_modifica_equipaje(ArbolABB* pasajeros){
         case 1:
             cout << "\n \tPNR del pasajero: ";
             cin >> PNRimp;
-            cout << "\n \tESTAS SEGURO? y/n: ";
-            cin >> eleccion;
-            if (eleccion == "y"){
-             pasajeros->Borrar(PNRimp);
-            }
-
+            Pasajero pasejero = pasajeros->Buscar(PNRimp0);
+            leerEquipaje(pasajeros);
+            cout<<"Elige Maleta A Cambiar:";
+            cin >>Maleta;
+            TMaleta* tmaleta = buscarMaleta(Maleta);
+            cout<<"Elige Numero De Bultos:";
+            cin >>nbultos;
+            cout<<"Elige Tipo De Maleta:";
+            cin >>tipo;
+            cout<<"Elige Cantidad De Peso:";
+            cin >>piso;
+            tmaleta->nbulto = nbultos;
+            tmaleta->tipo = tipo;
+            tmaleta->piso = piso;
             break;
         case 0:
             repeticion = false ;//cuando se quiera salir, la variable que controla el bucle do while (repeticion) pasará a false
