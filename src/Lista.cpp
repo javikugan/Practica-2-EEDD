@@ -92,4 +92,17 @@ void Lista::recorrerLista(){
         aux = aux->siguiente;
     }
     cout << endl;
+
+}
+int Lista::longitudLista(){
+    pnodo aux;
+    aux = cabeza;
+    int cont = 0;
+    while(aux){
+    cont +=1;
+    aux = aux->siguiente;
+
+    }
+    cout << endl;
+
 }

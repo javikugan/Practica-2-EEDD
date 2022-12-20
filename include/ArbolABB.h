@@ -40,24 +40,15 @@ class ArbolABB {
 
    // Borrar un elemento del �rbol:
    void Borrar(string PNRPas);
-
    // Funci�n de b�squeda:
    Pasajero Buscar(string PNRPas);
-
    // Comprobar si el �rbol est� vac�o:
    bool Vacio(NodoArbol *r) { return r==NULL; }
-
    // Comprobar si es un nodo hoja:
    bool EsHoja(NodoArbol *r) { return !r->der && !r->izq; }
-
    // Contar n�mero de nodos:
    const int NumeroNodos();
    const int AlturaArbol();
-
-   // Calcular altura de un int:
-   int Altura(Pasajero dat);
-
-
    // Moverse al nodo raiz:
    void Raiz() { actual = raiz; }
 

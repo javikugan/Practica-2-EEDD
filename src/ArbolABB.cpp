@@ -99,8 +99,7 @@ void ArbolABB::InOrden(NodoArbol* nodo, bool (*callback)(Pasajero, void*), void*
     }
 }
 // Buscar un valor en el �rbol
-Pasajero ArbolABB::Buscar(string PNRPas)
-{
+Pasajero ArbolABB::Buscar(string PNRPas){
    actual = raiz;
 
    // Todav�a puede aparecer, ya que quedan nodos por mirar

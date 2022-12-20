@@ -20,6 +20,7 @@ class Lista
         bool esActual();
         TMaleta valorActual();
         void recorrerLista();
+        int longitudLista();
 
     private:
         NodoLista *cabeza;

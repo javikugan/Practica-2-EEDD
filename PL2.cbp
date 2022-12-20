@@ -35,6 +35,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/ArbolABB.h" />
+		<Unit filename="include/Asiento.h" />
 		<Unit filename="include/Lista.h" />
 		<Unit filename="include/NodoLista.h" />
 		<Unit filename="include/Pasajero.h" />

@@ -28,6 +28,7 @@ namespace Util{
     void menu_borrar_equipaje(ArbolABB* pasajeros);
     void menu_modifica_equipaje(ArbolABB* pasajeros);
     void menu_mover_equipaje(ArbolABB* pasajeros);
+    void menu_anadir_equipaje(ArbolABB* pasajeros);
     void leerPasajero(Pasajero p);
     void leerEquipaje(Pasajero p);
 }
